@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Design & Analysis Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .result {
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 2px solid #ccc;
+            display: none;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic Design and Analysis of Algorithms</h1>
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. Which of the following is NOT a fundamental algorithm design technique?</p>
+            <input type="radio" name="q1" value="A"> A) Divide and Conquer<br>
+            <input type="radio" name="q1" value="B"> B) Dynamic Programming<br>
+            <input type="radio" name="q1" value="C"> C) Sorting and Searching<br>
+            <input type="radio" name="q1" value="D"> D) Greedy Algorithms<br>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. In Divide and Conquer, the problem is typically divided into how many subproblems?</p>
+            <input type="radio" name="q2" value="A"> A) Two subproblems<br>
+            <input type="radio" name="q2" value="B"> B) Multiple independent subproblems<br>
+            <input type="radio" name="q2" value="C"> C) One subproblem<br>
+            <input type="radio" name="q2" value="D"> D) Dependent subproblems<br>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. Which of the following is a key characteristic of Greedy Algorithms?</p>
+            <input type="radio" name="q3" value="A"> A) They optimize solutions globally.<br>
+            <input type="radio" name="q3" value="B"> B) They make locally optimal choices at each step.<br>
+            <input type="radio" name="q3" value="C"> C) They solve all subproblems before proceeding.<br>
+            <input type="radio" name="q3" value="D"> D) They work only for polynomial-time problems.<br>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. The time complexity of the Merge Sort algorithm is:</p>
+            <input type="radio" name="q4" value="A"> A) O(n)<br>
+            <input type="radio" name="q4" value="B"> B) O(n²)<br>
+            <input type="radio" name="q4" value="C"> C) O(log n)<br>
+            <input type="radio" name="q4" value="D"> D) O(n log n)<br>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. Which algorithm design technique solves a problem by building a solution piece by piece, choosing the next piece that offers the most immediate benefit?</p>
+            <input type="radio" name="q5" value="A"> A) Dynamic Programming<br>
+            <input type="radio" name="q5" value="B"> B) Greedy Algorithms<br>
+            <input type="radio" name="q5" value="C"> C) Divide and Conquer<br>
+            <input type="radio" name="q5" value="D"> D) Brute Force<br>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. Which of the following is an example of a problem that can be solved using Dynamic Programming?</p>
+            <input type="radio" name="q6" value="A"> A) Binary Search<br>
+            <input type="radio" name="q6" value="B"> B) Knapsack Problem<br>
+            <input type="radio" name="q6" value="C"> C) Quick Sort<br>
+            <input type="radio" name="q6" value="D"> D) Bubble Sort<br>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. In Dynamic Programming, the principle of 'overlapping subproblems' refers to:</p>
+            <input type="radio" name="q7" value="A"> A) Subproblems being solved multiple times.<br>
+            <input type="radio" name="q7" value="B"> B) Dividing problems into non-overlapping subproblems.<br>
+            <input type="radio" name="q7" value="C"> C) Combining multiple solutions of subproblems.<br>
+            <input type="radio" name="q7" value="D"> D) Using a stack-based approach to solve problems.<br>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. The primary difference between Dynamic Programming and Divide and Conquer is:</p>
+            <input type="radio" name="q8" value="A"> A) Dynamic Programming solves each subproblem only once and stores the result.<br>
+            <input type="radio" name="q8" value="B"> B) Divide and Conquer solves each subproblem independently.<br>
+            <input type="radio" name="q8" value="C"> C) Divide and Conquer stores results of all subproblems.<br>
+            <input type="radio" name="q8" value="D"> D) Dynamic Programming doesn't involve recursion.<br>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. In analyzing an algorithm, the term 'Big-O' refers to:</p>
+            <input type="radio" name="q9" value="A"> A) The actual runtime of the algorithm.<br>
+            <input type="radio" name="q9" value="B"> B) The worst-case time complexity.<br>
+            <input type="radio" name="q9" value="C"> C) The average-case performance.<br>
+            <input type="radio" name="q9" value="D"> D) The best-case scenario.<br>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. The traveling salesman problem is typically solved using which of the following techniques?</p>
+            <input type="radio" name="q10" value="A"> A) Divide and Conquer<br>
+            <input type="radio" name="q10" value="B"> B) Greedy Algorithm<br>
+            <input type="radio" name="q10" value="C"> C) Backtracking<br>
+            <input type="radio" name="q10" value="D"> D) Dynamic Programming<br>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question">
+            <p>11. A problem is said to be NP-complete if:</p>
+            <input type="radio" name="q11" value="A"> A) It can be solved in polynomial time.<br>
+            <input type="radio" name="q11" value="B"> B) Every algorithm solving it takes exponential time.<br>
+            <input type="radio" name="q11" value="C"> C) The solution can be verified in polynomial time.<br>
+            <input type="radio" name="q11" value="D"> D) It is both in NP and can be solved in polynomial time.<br>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question">
+            <p>12. In asymptotic analysis, which of the following represents the upper bound of an algorithm’s running time?</p>
+            <input type="radio" name="q12" value="A"> A) Theta (θ)<br>
+            <input type="radio" name="q12" value="B"> B) Omega (Ω)<br>
+            <input type="radio" name="q12" value="C"> C) Big-O (O)<br>
+            <input type="radio" name="q12" value="D"> D) Little-o (o)<br>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question">
+            <p>13. Which algorithm solves problems by trying all possible solutions and selecting the best one?</p>
+            <input type="radio" name="q13" value="A"> A) Dynamic Programming<br>
+            <input type="radio" name="q13" value="B"> B) Greedy Algorithm<br>
+            <input type="radio" name="q13" value="C"> C) Backtracking<br>
+            <input type="radio" name="q13" value="D"> D) Brute Force<br>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question">
+            <p>14. The Fibonacci sequence is an example of a problem that can be solved using:</p>
+            <input type="radio" name="q14" value="A"> A) Greedy Algorithm<br>
+            <input type="radio" name="q14" value="B"> B) Divide and Conquer<br>
+            <input type="radio" name="q14" value="C"> C) Dynamic Programming<br>
+            <input type="radio" name="q14" value="D"> D) Brute Force<br>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question">
+            <p>15. Which of the following is true about the complexity class P?</p>
+            <input type="radio" name="q15" value="A"> A) Problems in P can only be solved in exponential time.<br>
+            <input type="radio" name="q15" value="B"> B) Problems in P can be solved in polynomial time.<br>
+            <input type="radio" name="q15" value="C"> C) Problems in P are unsolvable in practical scenarios.<br>
+            <input type="radio" name="q15" value="D"> D) Problems in P cannot be verified in polynomial time.<br>
+        </div>
+
+        <button type="button" onclick="calculateScore()">Submit</button>
+
+        <div class="result" id="result">Your score is: <span id="score"></span> out of 15</div>
+    </form>
+
+    <script>
+        function calculateScore() {
+            const answers = {
+                q1: 'C', q2: 'B', q3: 'B', q4: 'D', q5: 'B', 
+                q6: 'B', q7: 'A', q8: 'A', q9: 'B', q10: 'D', 
+                q11: 'C', q12: 'C', q13: 'D', q14: 'C', q15: 'B'
+            };
+
+            let score = 0;
+            const form = document.forms['quizForm'];
+            
+            for (let i = 1; i <= 15; i++) {
+                const answer = form['q' + i].value;
+                if (answer === answers['q' + i]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            const scoreSpan = document.getElementById('score');
+            scoreSpan.textContent = score;
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
